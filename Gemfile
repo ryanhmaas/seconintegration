@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'activeadmin'
+gem 'devise'
 gem 'bootsnap', require: false
 
 group :development, :test do
