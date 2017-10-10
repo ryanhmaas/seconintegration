@@ -9,7 +9,14 @@ Bundler.require(*Rails.groups)
 module Seconintegration
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+
     config.load_defaults 5.1
+
+     # assets pipeline config to work on Heroku
+    config.assets.initialize_on_precompile = false
+
+    # add active admin assets to precompile list, loaded from vendor/assets
+    config.assets.precompile += %w( active_admin.js active_admin.css.scss )
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
