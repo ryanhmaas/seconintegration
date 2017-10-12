@@ -269,6 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  bcrypt
   better_errors
   binding_of_caller
   bootsnap
