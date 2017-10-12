@@ -1,9 +1,10 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Servicereport do
 # See permitted parameters documentation:
+ permit_params [:photo, :user_id]
+
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 # permit_params :list, :of, :attributes, :on, :model
-  permit_params [:email, :password, :password_confirmation, :account_id, :ismaster] 
 #
 # or
 #
@@ -13,16 +14,23 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
-
-form do |f|
+  form(:html => { :multipart => true }) do |f|
     f.inputs do
-      f.input :email
-      f.input :password, :required => false
-      f.input :password_confirmation, :required => false
-      f.input :ismaster, as: :select
-      f.input :account_id, as: :select, :collection => Account.all
+      f.inputs "Attachment", :multipart => true do 
+        f.input :photo, :as => :file
+      end
+      f.input :user, label: "Choose a user"
     end
     f.actions
   end
 
+
+  show do
+    attributes_table do
+      row :user
+      row :photo do |p|
+       image_tag p.photo
+      end
+    end
+  end
 end

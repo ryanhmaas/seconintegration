@@ -41,6 +41,9 @@ gem 'bootsnap', require: false
 gem 'bootstrap', '~> 4.0.0.beta' 
 gem 'jquery-rails'
 
+#file uploads
+gem 'carrierwave', '~> 1.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -67,4 +70,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'bcrypt', platforms: [:ruby, :x64_mingw]
+gem 'bcrypt', platforms: :ruby
