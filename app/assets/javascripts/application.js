@@ -18,4 +18,52 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-//Override the default confirm dialog by rails
+// document ready
+$(document).ready(function () {
+
+    /*---------- Responsive Nav -----------*/
+
+    // on button click
+    $("#topbar-nav__hamburger").click(function () {
+        $("#topbar-nav__linkset").slideToggle();
+    });
+
+    // kill jQuery styling on resize
+    $(window).on("resize", function () {
+        if ($(window).width() > 1200) {
+            $('#topbar-nav__linkset').css('display', '');
+        }
+    }).resize();
+
+
+    
+    /*---------- Responsive Search -----------*/
+
+    // on button click
+    $(".topbar-nav__link-search, .topbar-nav__link-search--mobile").click(function () {
+        $(".topbar-nav__search-bar").slideToggle();
+        $(".topbar-nav__search-bar").focus();
+    });
+
+    // kill jQuery styling on resize
+    $(window).on("resize", function () {
+        if ($(window).width() > 1200) {
+            $('.topbar-nav__search-bar').css('display', '');
+        }
+    }).resize();
+    
+    
+    
+    /*---------- Responsive Footer -----------*/
+    
+    $(".footer__link-header-wrapper").click(function () {
+        event.preventDefault();
+        
+        if ($(this).next(".footer__link-wrapper").hasClass("footer__open-link")) {
+            $(this).next(".footer__link-wrapper").removeClass("footer__open-link");
+        } else {
+            $(this).next(".footer__link-wrapper").addClass("footer__open-link");
+        }
+        
+    });
+});

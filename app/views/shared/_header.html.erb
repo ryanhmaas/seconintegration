@@ -1,28 +1,62 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!-- Navbar -->
+  <!-- Using custom navbar here rather than the bootstrap one. Allows for more flexible styling  -->
+  <nav>
+      <div class="topbar-nav">
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search", data-behavior="autocomplete">
-  </form>
-    <% if user_signed_in? %>
-       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-        <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </div>
-</nav>
+          <div class="container">
+
+              <button class="topbar-nav__link topbar-nav__link-search--mobile">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+
+              <a href="#" class="topbar-nav__brand">
+                  <img class="topbar-nav__brand-img" src="<%=asset_path('logo')%>" alt="BRAND">
+              </a>
+
+              <button id="topbar-nav__hamburger" class="topbar-nav__hamburger">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </button>
+
+              <ul id="topbar-nav__linkset" class="topbar-nav__linkset">
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Company</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Security</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Communication</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Fire</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Industries</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link">Contact Us</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <a href="#" class="topbar-nav__link topbar-nav__link-account">Account</a>
+                  </li>
+
+                  <li class="topbar-nav__link-wrapper">
+                      <button class="topbar-nav__link topbar-nav__link-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </li>
+
+              </ul>
+              
+          </div>
+      </div>
+      <div class="topbar-nav__search-bar">
+          <input class="topbar-nav__search-bar-input" type="text" autofocus>
+      </div>
+  </nav>
+  <!-- Nav End -->

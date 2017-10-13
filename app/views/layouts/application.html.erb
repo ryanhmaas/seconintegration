@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Seconintegration</title>
+    <title>Secon Integration</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 
   </head>
 
@@ -14,5 +15,8 @@
     <%= render "shared/header" %>
     <%= yield %>
     <%= render "shared/footer" %>
+    <%= javascript_include_tag 'brands.min' %>
+    <%= javascript_include_tag 'solid.min' %>
+    <%= javascript_include_tag 'fontawesome.min' %>
   </body>
 </html>

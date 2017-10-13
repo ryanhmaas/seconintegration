@@ -15,3 +15,524 @@
  */
 
  @import "bootstrap";
+
+ /* line 6, /Users/dereknelsen/Desktop/secon_demo/scss/components/_type.scss */
+* {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 11, /Users/dereknelsen/Desktop/secon_demo/scss/components/_type.scss */
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #4D4D4D; }
+
+/* line 17, /Users/dereknelsen/Desktop/secon_demo/scss/components/_type.scss */
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #4D4D4D; }
+
+/* line 23, /Users/dereknelsen/Desktop/secon_demo/scss/components/_type.scss */
+a {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700; }
+
+/* line 5, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+button:focus {
+  outline: none; }
+
+/* line 9, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+body {
+  background: #F0F3F6;
+  padding-top: 100px; }
+
+/* line 14, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+.container {
+  max-width: 1200px; }
+
+/* line 18, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+.carousel {
+  height: 700px; }
+  /* line 21, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .carousel-caption {
+    text-align: left;
+    bottom: 45%;
+    max-width: 900px;
+    margin: 0 auto; }
+    /* line 26, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .carousel-caption > * {
+      color: #ffffff; }
+    @media (max-width: 576px) {
+      /* line 21, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+      .carousel-caption {
+        bottom: 30%; } }
+  /* line 35, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .carousel-indicators {
+    bottom: 15%; }
+
+/* line 46, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+.carousel-img {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  height: 700px; }
+  /* line 55, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .carousel-img:after {
+    position: absolute;
+    background-color: #212344;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5; }
+
+/* line 68, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+#carousel-img-1 {
+  background-image: asset-data-url('hero_01'); }
+
+/* line 72, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+#carousel-img-2 {
+  background-image: asset-data-url('service_01'); }
+
+/* line 76, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+#carousel-img-3 {
+  background-image: asset-data-url('camera') }
+
+/* line 84, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+.card {
+  padding: 45px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s, transform 0.3s; }
+  /* line 5, /Users/dereknelsen/Desktop/secon_demo/scss/components/_mixins.scss */
+  .card:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.14), 0 20px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); }
+
+/* line 93, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+.container__landing .card {
+  min-height: 400px; }
+  @media (max-width: 1200px) {
+    /* line 93, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card {
+      min-height: 550px; } }
+  @media (max-width: 576px) {
+    /* line 93, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card {
+      min-height: auto; } }
+  /* line 101, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .container__landing .card-body {
+    padding: 0; }
+  /* line 104, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .container__landing .card h2 {
+    text-align: center;
+    margin-bottom: 30px; }
+  /* line 109, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .container__landing .card__link {
+    display: block;
+    position: relative;
+    padding: 5px 0;
+    width: 100%;
+    color: #4D4D4D;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s; }
+    /* line 118, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card__link:hover {
+      color: #FFC300; }
+    @media (max-width: 1200px) {
+      /* line 109, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+      .container__landing .card__link {
+        padding: 10px 0; } }
+  /* line 127, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .container__landing .card__link-wrapper {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 49%; }
+    @media (max-width: 1200px) {
+      /* line 127, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+      .container__landing .card__link-wrapper {
+        text-align: center;
+        width: 100%; } }
+  /* line 140, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+  .container__landing .card__icon {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    border-radius: 5px; }
+    /* line 150, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card__icon--gradient-01 {
+      background: linear-gradient(225deg, #ad1457, #4527a0); }
+    /* line 153, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card__icon--gradient-02 {
+      background: linear-gradient(225deg, #9e9d24, #00838f); }
+    /* line 156, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card__icon--gradient-03 {
+      background: linear-gradient(225deg, #f89938, #d84315); }
+    /* line 159, /Users/dereknelsen/Desktop/secon_demo/scss/components/_bs-overwrites.scss */
+    .container__landing .card__icon--gradient-04 {
+      background: linear-gradient(225deg, #00838f, #283593); }
+
+/* line 3, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+.topbar-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #212344;
+  z-index: 99; }
+  /* line 12, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__brand {
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    padding: 17px 25px;
+    transition: opacity 0.3s; }
+    /* line 18, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__brand-img {
+      max-width: 150px; }
+    /* line 21, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__brand:hover {
+      opacity: 0.8; }
+  /* line 26, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__hamburger {
+    display: none; }
+  /* line 30, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__linkset {
+    display: block;
+    text-align: right;
+    float: right;
+    width: 90%;
+    padding-left: 0; }
+  /* line 38, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__link-wrapper {
+    display: inline-block;
+    position: relative;
+    text-align: center; }
+  /* line 44, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__link {
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    padding: calc((100px / 2) - 8px) 20px;
+    height: 100px;
+    width: 100%;
+    color: #ffffff;
+    transition: color 0.3s, background 0.3s, border-color 0.3s; }
+    /* line 55, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link:hover, .topbar-nav__link:active {
+      color: #FFC300;
+      text-decoration: none; }
+    /* line 59, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link:after {
+      content: '';
+      position: absolute;
+      bottom: 37px;
+      border-bottom: 2px solid #FFC300;
+      left: 10%;
+      right: 90%;
+      transition: left 0.3s ease, right 0.3s ease; }
+    /* line 69, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link:hover:after {
+      left: 10%;
+      right: 10%;
+      transition: left 0.3s ease, right 0.3s ease; }
+    /* line 76, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link-account {
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #ffffff; }
+      /* line 80, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__link-account:hover, .topbar-nav__link-account:active {
+        color: #212344;
+        background-color: #FFC300;
+        border-color: #FFC300; }
+      @media (min-width: 1200px) {
+        /* line 86, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+        .topbar-nav__link-account:after {
+          display: none; } }
+    /* line 92, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link-search {
+      background: none;
+      border: none;
+      cursor: pointer; }
+      /* line 96, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__link-search--mobile {
+        display: none;
+        border: none; }
+      /* line 100, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__link-search:after {
+        display: none; }
+  /* line 107, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav__search-bar {
+    display: none;
+    position: fixed;
+    top: 100px;
+    width: 100vw;
+    background: #212344;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    height: 100px;
+    z-index: 100; }
+    /* line 119, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__search-bar-input {
+      display: block;
+      position: relative;
+      width: 800px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      outline: none;
+      font-size: 24px;
+      color: #212344;
+      font-weight: 300;
+      text-align: center; }
+      @media (max-width: 1200px) {
+        /* line 119, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+        .topbar-nav__search-bar-input {
+          width: 100%; } }
+
+/*====================================*/
+/*---------Responsive Medium----------*/
+/*====================================*/
+@media screen and (max-width: 1200px) {
+  /* line 145, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+  .topbar-nav {
+    display: block;
+    position: fixed;
+    margin-bottom: 100px; }
+    /* line 151, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__brand {
+      width: 60%;
+      float: left; }
+    /* line 157, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__linkset {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #212344;
+      width: 100%; }
+    /* line 167, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link-account {
+      display: block;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 16px;
+      line-height: 16px;
+      padding: calc((100px / 2) - 8px) 20px;
+      height: 100px;
+      width: 100%;
+      color: #FFC300;
+      border: none; }
+      /* line 178, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__link-account:hover, .topbar-nav__link-account:active {
+        color: #ffffff;
+        background: none;
+        text-decoration: none; }
+    /* line 186, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link-search {
+      display: none; }
+      /* line 188, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__link-search--mobile {
+        width: 20%;
+        display: inline-block;
+        background: none;
+        float: left;
+        font-size: 24px;
+        line-height: 24px;
+        cursor: pointer; }
+        /* line 196, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+        .topbar-nav__link-search--mobile:after {
+          display: none; }
+    /* line 203, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link:after {
+      content: '';
+      position: absolute;
+      bottom: 37px;
+      border-bottom: 2px solid #FFC300;
+      left: 50%;
+      right: 50%;
+      transition: left 0.3s ease, right 0.3s ease; }
+    /* line 213, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link:hover:after {
+      left: 40%;
+      right: 40%;
+      transition: left 0.3s ease, right 0.3s ease; }
+    /* line 221, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__link-wrapper {
+      position: relative;
+      width: 100%; }
+    /* line 226, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+    .topbar-nav__hamburger {
+      display: inline-block;
+      width: 20%;
+      background: none;
+      border: none;
+      float: right;
+      font-size: 24px;
+      line-height: 24px;
+      height: 100px;
+      padding: calc((100px / 2) - 12px) 20px;
+      color: #ffffff;
+      cursor: pointer;
+      transition: color 0.3s; }
+      /* line 239, /Users/dereknelsen/Desktop/secon_demo/scss/components/_nav.scss */
+      .topbar-nav__hamburger:hover, .topbar-nav__hamburger:active {
+        color: #FFC300;
+        text-decoration: none; } }
+
+/* line 5, /Users/dereknelsen/Desktop/secon_demo/scss/components/_section.scss */
+.slant-top-right {
+  z-index: 40;
+  display: block;
+  position: relative;
+  bottom: 83.33333px;
+  background: #F0F3F6;
+  height: 250px;
+  transform: skewY(-3deg);
+  z-index: 0; }
+
+/* line 16, /Users/dereknelsen/Desktop/secon_demo/scss/components/_section.scss */
+.slant-wrapper {
+  display: block;
+  position: relative;
+  margin-top: -250px;
+  margin-bottom: 50px;
+  z-index: 1; }
+
+/* line 24, /Users/dereknelsen/Desktop/secon_demo/scss/components/_section.scss */
+.content-section {
+  min-height: 500px;
+  padding: 20px;
+  background: #F0F3F6;
+  z-index: 1; }
+
+/* line 2, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+.footer {
+  display: block;
+  position: relative;
+  padding: 40px 0;
+  background: #212344;
+  flex-wrap: wrap; }
+  @media (max-width: 576px) {
+    /* line 2, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer {
+      padding-top: 0;
+      padding-bottom: 0; } }
+  /* line 13, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer a {
+    text-decoration: none; }
+  /* line 18, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__linkset {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: calc(100% / 5);
+    min-height: 200px;
+    float: left; }
+    /* line 26, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer__linkset-header {
+      color: #ffffff; }
+    @media (max-width: 1200px) {
+      /* line 18, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__linkset {
+        width: 50%;
+        padding: 0 40px; } }
+    @media (max-width: 576px) {
+      /* line 18, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__linkset {
+        width: 100%;
+        min-height: 0;
+        padding: 15px 0 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); } }
+  /* line 42, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__group {
+    display: block;
+    position: relative; }
+    @media (max-width: 576px) {
+      /* line 42, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__group {
+        text-align: center; } }
+  @media (max-width: 576px) {
+    /* line 51, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer__link-wrapper {
+      display: none; } }
+  /* line 59, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__open-link {
+    display: block !important;
+    position: relative;
+    padding-bottom: 10px; }
+  /* line 65, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__link {
+    display: block;
+    position: relative;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0.3;
+    transition: opacity 0.3s; }
+    /* line 72, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer__link:hover, .footer__link:active, .footer__link:focus {
+      color: #ffffff;
+      opacity: 0.8; }
+    @media (max-width: 576px) {
+      /* line 65, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__link {
+        padding: 10px 0; } }
+  /* line 80, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__social {
+    display: inline-flex;
+    position: relative;
+    font-size: 48px;
+    width: 100%;
+    justify-content: flex-end;
+    margin: 0 auto 30px; }
+    /* line 87, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer__social-icon {
+      margin-left: 10px;
+      color: #ffffff;
+      opacity: 0.3;
+      transition: opacity 0.3s; }
+      /* line 92, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__social-icon:hover, .footer__social-icon:active, .footer__social-icon:focus {
+        color: #ffffff;
+        opacity: 0.8; }
+    @media (max-width: 576px) {
+      /* line 80, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+      .footer__social {
+        justify-content: center; } }
+  /* line 103, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__colophon {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0; }
+    /* line 112, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+    .footer__colophon a {
+      padding: 0; }
+  /* line 117, /Users/dereknelsen/Desktop/secon_demo/scss/components/_footer.scss */
+  .footer__copyright {
+    color: #ffffff;
+    margin: 0; }
