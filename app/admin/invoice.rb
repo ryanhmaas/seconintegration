@@ -24,6 +24,13 @@ ActiveAdmin.register Invoice do
     f.actions
   end
 
+  index do 
+    selectable_column
+    column "User", :user
+    column "Photo/PDF", :photo
+    column "Applied Date", :applicable_date
+    actions
+  end
 
   show do
     attributes_table do
