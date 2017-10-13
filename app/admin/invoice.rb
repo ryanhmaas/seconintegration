@@ -1,6 +1,6 @@
 ActiveAdmin.register Invoice do
 # See permitted parameters documentation:
-    permit_params [:photo, :user_id, :applicable_date]
+    permit_params [:photo, :user_id, :applicable_date, :paid]
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 # permit_params :list, :of, :attributes, :on, :model
@@ -20,6 +20,7 @@ ActiveAdmin.register Invoice do
       end
       f.input :applicable_date
       f.input :user, label: "Choose a user"
+      f.input :paid, as: :select
     end
     f.actions
   end
@@ -28,6 +29,7 @@ ActiveAdmin.register Invoice do
     selectable_column
     column "User", :user
     column "Photo/PDF", :photo
+    column "Paid", :paid
     column "Applied Date", :applicable_date
     actions
   end
@@ -35,6 +37,7 @@ ActiveAdmin.register Invoice do
   show do
     attributes_table do
       row :user
+      row :paid
       row :applicable_date
       row :photo do |p|
        image_tag p.photo
